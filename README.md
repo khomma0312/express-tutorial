@@ -32,5 +32,9 @@ Prisma CLIを使って、DBにスキーマ定義をマイグレーションす�
 npx prisma migrate dev --name init
 ```
 
+## 開発時の留意点
+- schema.prismaを変更した際は、`prisma migrate dev`または`prisma db push`でDBに反映させるようにする。
+  - 上記コマンドを実行すると、Prisma Clientの情報をスキーマに合わせて更新する`prisma generate`も一緒に実行してくれる
+
 ## 参考
 [Start from scratch with Prisma ORM using TypeScript and PostgreSQL \(15 min\) \| Prisma Documentation](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgresql)
